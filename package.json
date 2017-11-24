@@ -6,17 +6,16 @@
   "repository": "",
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "dependencies": {
-    "@angular/router": "^4.3.5",
     "angular": "^1.6.5",
     "angular-sanitize": "^1.6.5",
     "angular-ui-router": "^1.0.3",
     "async": "~0.2.8",
+    "express": "^4.15.4",
     "jquery": "^3.2.1",
-    "socket.io": "~0.9.14",
+    "socket.io": "^0.9.19",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "express": "^4.15.4",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-less": "^3.3.2",

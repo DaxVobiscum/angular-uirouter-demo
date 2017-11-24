@@ -20,6 +20,9 @@ var router = express();
 var server = http.createServer(router);
 var io = socketio.listen(server);
 
+var serverHost = process.env.IP || "localhost";
+var serverPort = process.env.PORT || "3000";
+
 //router.use(express.static(path.resolve(__dirname, 'client')));
 
 router.use("/js", express.static(path.resolve(__dirname, "client", "js")));
@@ -87,7 +90,7 @@ function broadcast(event, data) {
   });
 }
 
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+server.listen(serverPort, serverHost, function(){
   var addr = server.address();
   console.log("Chat server listening at", addr.address + ":" + addr.port);
 });
