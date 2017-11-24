@@ -12,7 +12,7 @@
     "async": "~0.2.8",
     "express": "^4.15.4",
     "jquery": "^3.2.1",
-    "socket.io": "^0.9.19",
+    "socket.io": "^2.0.4",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
