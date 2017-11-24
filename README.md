@@ -1,6 +1,6 @@
-#angular-uirouter-demo
+# angular-uirouter-demo
 
-Demonstrates a single-page application (SPA) using AngularJS 1.6 and UI-Router. Runs on an Express web server.
+Demonstrates a single-page application (SPA) using AngularJS 1.6 and [UI-Router](https://github.com/angular-ui/ui-router). Runs on an Express web server.
 
 To run, fork and clone the repository to your local; then run the commands below from the project directory in sequence:
 
