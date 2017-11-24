@@ -1,8 +1,8 @@
-//
-// # SimpleServer
-//
-// A simple chat server using Socket.IO, Express, and Async.
-//
+/*
+  Based on 'chat-example' by Mostafa Eweda <mo.eweda@gmail.com>.
+  "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow."
+*/
+
 var http = require('http');
 var path = require('path');
 
@@ -10,20 +10,12 @@ var async = require('async');
 var socketio = require('socket.io');
 var express = require('express');
 
-//
-// ## SimpleServer `SimpleServer(obj)`
-//
-// Creates a new instance of SimpleServer with the following options:
-//  * `port` - The HTTP port to listen on. If `process.env.PORT` is set, _it overrides this value_.
-//
 var router = express();
 var server = http.createServer(router);
 var io = socketio.listen(server);
 
 var serverHost = process.env.IP || "localhost";
 var serverPort = process.env.PORT || "3000";
-
-//router.use(express.static(path.resolve(__dirname, 'client')));
 
 router.use("/js", express.static(path.resolve(__dirname, "client", "js")));
 router.use("/css", express.static(path.resolve(__dirname, "client", "css")));
@@ -92,5 +84,5 @@ function broadcast(event, data) {
 
 server.listen(serverPort, serverHost, function(){
   var addr = server.address();
-  console.log("Chat server listening at", addr.address + ":" + addr.port);
+  console.log("Server listening at", addr.address + ":" + addr.port);
 });
